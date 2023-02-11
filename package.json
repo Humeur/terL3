@@ -1,9 +1,11 @@
 {
   "name": "ter_etl",
   "version": "0.0.1",
+  "type": "module",
   "description": "Projet de ter realise en L3 a l'universite de Montpellier.",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
+    "start": "node ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +19,14 @@
   },
   "homepage": "https://github.com/Humeur/terL3#readme",
   "dependencies": {
+    "@fastify/multipart": "^7.4.0",
     "@fastify/static": "^6.9.0",
     "@fastify/view": "^7.4.1",
+    "ejs": "^3.1.8",
     "fastify": "^4.13.0",
-    "ejs": "^3.1.8"
+    "fs": "^0.0.1-security",
+    "stream": "^0.0.2",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
