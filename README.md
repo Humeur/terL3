@@ -8,4 +8,4 @@ Développement d’une Application pour l’Analyse, le  Traitement et l’Inté
    - En utilisant la commande : `npm install`.
 
 ## Execution :
- - `node ./src/server.js`
+ - `node src/server.js`
