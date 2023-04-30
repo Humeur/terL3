@@ -2,5 +2,43 @@
 
 <form action="/upload" method="post" enctype="multipart/form-data">
     <input type="file" name="file" id="file">
+
+    <select>
+        <option value="">Choisir un format de sortie...</option>
+        <option value="CSV">CSV</option>
+        <option value="DB">Data Base (En développement)</option>
+        <option value="JSON">JSON (En développement)</option>
+    </select>
     <input type="submit" value="Envoyer">
+    <br><br>
+    <h2>Recent files :</h2>
+    <%for(let i=0; i<fileNames.length; i++){%>
+        <h3><%=fileNames[i]%></h3>
+        <table style="border: 1px solid black">
+            <% let first=0 %>
+        <% for(let j=0; j<result[i].length; j++){
+            var keys = Object.keys(result[i][j]);
+            if(first==0){%>
+                <tr style="border: 1px solid black">
+                    <%
+                    for(key in keys){
+                        %>
+                        <th style="border: 1px solid black">
+                            <%=keys[key]%>
+                        </th>
+                    <%}%>
+                </tr>
+            <%}
+            first = first +1%>
+            <tr style="border: 1px solid black">
+                <%for(key in keys){%>
+                    <th style="border: 1px solid black">
+                        <%=result[i][j][keys[key]]%>
+                    </th>
+                    <%}%>
+            </tr>
+            <%}%>
+        </table>
+
+    <%} %>
 </form>

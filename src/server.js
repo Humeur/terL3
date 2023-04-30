@@ -16,8 +16,8 @@ app.register(fastifyView, {
     }
 });
 
+//appel des fonctions
 app.get('/', index);
-
 app.post('/upload', upload);
 
 
