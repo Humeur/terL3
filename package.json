@@ -22,9 +22,12 @@
     "@fastify/multipart": "^7.4.0",
     "@fastify/static": "^6.9.0",
     "@fastify/view": "^7.4.1",
+    "csv": "^6.2.10",
+    "csv-parser": "^3.0.0",
     "ejs": "^3.1.8",
     "fastify": "^4.13.0",
     "fs": "^0.0.1-security",
+    "jquery-csv": "^1.0.21",
     "stream": "^0.0.2",
     "util": "^0.12.5"
   },
